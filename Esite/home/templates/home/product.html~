@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load wagtailimages_tags %}
+
+{% block content %}
+
+<div class="container grid-lg">
+  <div class="columns">
+    <div class="column col-4">
+      {% image page.image max-300x300 as temp_image %}
+      <img src="{{ temp_image.url }}" alt="" />
